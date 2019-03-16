@@ -10,7 +10,7 @@
 #include <stdlib.h>
 
 #define TAM_MATRIZ 5
-#define TAM_MAX 10
+#define MAX_VAL 10
 
 void mudaLinha(int tabela[TAM_MATRIZ][TAM_MATRIZ], int linha1, int linha2);
 void mudaColuma(int tabela[TAM_MATRIZ][TAM_MATRIZ], int coluna1, int coluna2);
@@ -21,7 +21,7 @@ void apresentaMensagemParaContinuar();
 
 int main(int argc, const char * argv[]) {
 	int tabela[TAM_MATRIZ][TAM_MATRIZ];
-	adicionaValoresMatriz(tabela, TAM_MAX);
+	adicionaValoresMatriz(tabela, MAX_VAL);
 	//Apresenta a matriz normal
 	printf("Matriz normal\n");
 	printaMatriz(tabela);
@@ -84,7 +84,7 @@ void adicionaValoresMatriz(int tabela[TAM_MATRIZ][TAM_MATRIZ], int tamMax) {
 	int i, j;
 	for(i = 0; i < TAM_MATRIZ; i += 1) {
 		for(j = 0; j < TAM_MATRIZ; j++) {
-			tabela[i][j] = (rand() % TAM_MAX + 1);
+			tabela[i][j] = (rand() % MAX_VAL + 1);
 		}
 	}
 }
