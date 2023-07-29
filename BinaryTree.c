@@ -51,23 +51,29 @@ void print4(struct Node *root) {
 int main()
 {
     struct Node *root = createNode(1);
+    
     root->right = createNode(2);
     root->left = createNode(3);
     root->right->right = createNode(4);
     root->right->left = createNode(5);
     root->left->right = createNode(6);
     root->left->left = createNode(7);
+    
     printf("%s:\n", "Post-order Traversal");
     print1(root);
     printf("\n");
+    
     printf("%s:\n", "In-order Traversal");
     print2(root);
     printf("\n");
+    
     printf("%s:\n", "Pre-order Traversal");
     print3(root);
     printf("\n");
+    
     printf("%s:\n", "Level-order Traversal");
     print4(root);
     printf("\n");
+    
     return 0;
 }
